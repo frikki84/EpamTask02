@@ -3,34 +3,40 @@ package by.epamtc.jwdmay2020.dziadkouskaya.task02;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class StringPractice {
+public class StringPracticeUnit01_06 {
 	public static void main(String[] args) {
-		String example = "WAKING_UP and GETTING_UP are two entirely different negotiations";
+		String example = "THIS is the house that JACK built.";
 
 		String evenString = makeEvenCharecterString(example);
 		String oddString = makeOddCharecterString(example);
 
+		System.out.println("String of even symbols is" + evenString + "\nString of odd symbols is " + oddString);
+
 		double upperCaseLettersPercent = findPercentageUppercaseLetter(example);
 		double lowercaseLettersPercent = 100 - upperCaseLettersPercent;
 
-		String stringWithoutSimilarSymbols = returnStringWithoutSimilarSymbols(example);
+		System.out.println("Percent of Uppercase letters is " + upperCaseLettersPercent
+				+ "\nPercent of lowercase letters is " + lowercaseLettersPercent);
 		
-		int frequancyOfSymbol = findCharFrequancyInString(example, 'a');
 		
-		/*
-		 * System.out.println(evenString + "\n" + oddString + "\n" +
-		 * upperCaseLettersPercent + "\n" + lowercaseLettersPercent + "\n" +
-		 * stringWithoutSimilarSymbols + "\n" + frequancyOfSymbol);
-		 * 
-		 */		
+		String stringWithoutSimilarSymbols = findStringWithoutSimilarSymbols(example);
 		
-		String string = "qwerty";
+		System.out.println("String without sam symbols is " + stringWithoutSimilarSymbols);
+
+		int frequancyOfSymbol = findCharFrequancyInString(example, 't');
+		System.out.println("Number of letter \"t\" in string is " + frequancyOfSymbol);
 		
-		String reverseString = createReverseString(string);
+		String reverseString = createReverseString(example);
+		System.out.println("Reverse String " + reverseString);
 		
-		System.out.println(reverseString);
+
+		String stringWithInsertString = addToStringNewPart(example, "MAMA", 13);
+		System.out.println("String With Insert Substring " + stringWithInsertString);
 		
-	
+		
+		String stringWithDeletePart = deleteStringPart(example, 9, 11);
+		System.out.println("String With delete part " + stringWithDeletePart);
+
 	}
 
 	// Четные и нечетные символы разделить по разным строкам
@@ -65,9 +71,9 @@ public class StringPractice {
 
 	// Процентное соотношение строчных и прописных букв
 	public static double findPercentageUppercaseLetter(String string) {
-		
+
 		String spacelessString = string.replaceAll("[^a-zA-Z]", "");
-		
+
 		String upperSpacelessString = spacelessString.toUpperCase();
 
 		int upperLetterCounter = 0;
@@ -85,7 +91,7 @@ public class StringPractice {
 	}
 
 	// Удаление одинаковых символов
-	public static String returnStringWithoutSimilarSymbols(String string) {
+	public static String findStringWithoutSimilarSymbols(String string) {
 		StringBuilder builderForResult = new StringBuilder();
 
 		int indexOfRepeatedSymbol;
@@ -116,24 +122,39 @@ public class StringPractice {
 				counter += 1;
 			}
 		}
-		
+
 		return counter;
 	}
-	
-	//Переворот строки
+
+	// Переворот строки
 	public static String createReverseString(String string) {
 		StringBuilder stringBuilder = new StringBuilder(string);
-		
+
 		String resultString = stringBuilder.reverse().toString();
-		
+
 		return resultString;
-		
+
 	}
-	
-	//Вставка подстроки
-	
-		
-	
-	
+
+	// Вставка подстроки
+	public static String addToStringNewPart(String string, String newPart, int startPosition) {
+		String fistPart = string.substring(0, startPosition - 1);
+		String lastPart = string.substring(startPosition - 1);
+
+		String result = fistPart + newPart + lastPart;
+
+		return result;
+
+	}
+
+	// Удаление подстроки
+	public static String deleteStringPart(String string, int startIndexForDelete, int endIndexForDelete) {
+		String fistPart = string.substring(0, startIndexForDelete - 1);
+		String lastPart = string.substring(endIndexForDelete);
+
+		String result = fistPart + lastPart;
+
+		return result;
+	}
 
 }
