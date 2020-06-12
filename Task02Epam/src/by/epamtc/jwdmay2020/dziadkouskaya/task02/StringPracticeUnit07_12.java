@@ -6,6 +6,7 @@ import java.util.regex.Pattern;
 public class StringPracticeUnit07_12 {
 	
 	public static void main(String[] args) {
+		
 		String example = "This is the house that Jack built." + 
 				"This is the malt that lay in the house that Jack built.";
 		
@@ -27,7 +28,7 @@ public class StringPracticeUnit07_12 {
 	}
 
 
-	// Копирование части строки
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	public static String copyStringPart(String string, int startPositionIndexToCopy, int endPositionIndexToCopy,
 			int startPositionIndexToInsert) {
 		StringBuilder resultBuilder = new StringBuilder(string);
@@ -42,13 +43,13 @@ public class StringPracticeUnit07_12 {
 
 	}
 
-	// Определение длины строки
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	public static int findStringLenth(String string) {
 
 		return string.length();
 	}
 
-	// Количество вхождений подстроки в строку
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	public static int findNumberOfSubstringInString(String string, String substring) {
 		int counter = 0;
 
@@ -63,7 +64,7 @@ public class StringPracticeUnit07_12 {
 
 	}
 
-	// Вывести слова строки в обратном порядке
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	public static String creatStringWithReverseWordSequence(String string) {
 		String[] wordList = string.split("\\s");
 
@@ -78,7 +79,7 @@ public class StringPracticeUnit07_12 {
 
 	}
 
-	// Заменить пробел и группы пробелов символом "*"
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ "*"
 	public static String changeSpacesToStars(String string) {
 		String regex = " +";
 		String result = string.replaceAll(regex, "*");

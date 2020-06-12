@@ -2,6 +2,7 @@ package by.epamtc.jwdmay2020.dziadkouskaya.task02;
 
 public class StringPracticeUnit13_18 {
 	public static void main(String[] args) {
+		
 		String example = "Cook pasta according to package-directions. Meanwhile, in a large skillet, cook bacon until crisp.";
 				
 		String stringWithLetterAtoBInLongestWord = changeLetterAtoBInLongestWord(example);
@@ -27,7 +28,7 @@ public class StringPracticeUnit13_18 {
 	}
 	
 
-	// Заменить в самом длинном слове строки буквы 'a' на 'b'
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ 'a' пїЅпїЅ 'b'
 	public static String changeLetterAtoBInLongestWord(String string) {
 		String[] wordList = string.split(" ");
 
@@ -50,7 +51,7 @@ public class StringPracticeUnit13_18 {
 		return result;
 	}
 
-	// Определить длину самого короткого слова в строке
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	public static int findShortestWordLength(String string) {
 		String[] wordList = string.split("\\s+");
 
@@ -65,7 +66,7 @@ public class StringPracticeUnit13_18 {
 		return minWordLength;
 	}
 
-	// Подсчет количества слов в строке
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	public static int findWordsNumberInString(String string) {
 		String[] wordList = string.split(" +");
 
@@ -75,7 +76,7 @@ public class StringPracticeUnit13_18 {
 
 	}
 
-	// Поменять слова местами
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	public static String swapWordsInString(String string, int numberOfFirstWord, int numberOfSecondWord) {
 
 		String[] wordList = string.split("\\s+");
@@ -92,7 +93,7 @@ public class StringPracticeUnit13_18 {
 
 	}
 
-	// Удаление последнего слова в строке
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	public static String deleteLastWordInString(String string) {
 		String[] wordList = string.split("\\s+");
 
@@ -103,7 +104,7 @@ public class StringPracticeUnit13_18 {
 		return result;
 	}
 
-	// Добавление пробелов в строку
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	public static String addSpacesToString(String string, int indexOfPlaceToAddSpace, int numberOfSpaces) {
 		StringBuilder lineOfSpaces = new StringBuilder();
 

@@ -2,6 +2,7 @@ package by.epamtc.jwdmay2020.dziadkouskaya.task02;
 
 public class StringPracticeUnit19_24 {
 	public static void main(String[] args) {
+		
 		String experimentString = "   A New Year is like a blank book, and the pen is in your hands.  ";
 
 		boolean isWordPalindrome = isPalindrom(experimentString);
@@ -27,7 +28,7 @@ public class StringPracticeUnit19_24 {
 
 	}
 
-	// Является ли строка палиндром?
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ?
 	public static boolean isPalindrom(String string) {
 		boolean result = true;
 
@@ -46,14 +47,14 @@ public class StringPracticeUnit19_24 {
 
 	}
 
-	// Замена подстроки в строке
+	// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	public static String changeSubstringToAnotherSubstring(String string, String oldSubstring, String newSubstring) {
 
 		return string.replaceFirst(oldSubstring, newSubstring);
 
 	}
 
-	// Сложение очень длинных целых чисел
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 	public static String findSummOfLongNumbers(long number1, long number2) {
 		long lastSymbolFromNumber1 = 0;
 		long number1WithoutLastSymbol = number1;
@@ -94,7 +95,7 @@ public class StringPracticeUnit19_24 {
 		return result;
 }
 
-	// Удаление из строки слов заданной длины
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 	public static String deleteWordsOfCertainLength(String string, int wordsLenth) {
 		String[] wordList = string.split("\\s+");
 
@@ -110,13 +111,13 @@ public class StringPracticeUnit19_24 {
 
 	}
 
-	// Удаление лишних пробелов
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	public static String deleteOddSpaces(String string) {
 		return string.replaceAll(" +", " ").trim();
 
 	}
 
-	// Выделение слов из строки
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	public static String[] findWordsArray(String string) {
 		String[] wordList = string.split("\\W+");
 		return wordList;

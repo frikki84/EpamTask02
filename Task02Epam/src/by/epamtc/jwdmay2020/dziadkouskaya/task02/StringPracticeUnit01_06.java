@@ -4,6 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StringPracticeUnit01_06 {
+	
 	public static void main(String[] args) {
 		String example = "THIS is the house that JACK built.";
 
@@ -39,7 +40,7 @@ public class StringPracticeUnit01_06 {
 
 	}
 
-	// Четные и нечетные символы разделить по разным строкам
+	// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
 	public static String makeEvenCharecterString(String string) {
 		StringBuilder evenString = new StringBuilder();
@@ -69,7 +70,7 @@ public class StringPracticeUnit01_06 {
 		return result;
 	}
 
-	// Процентное соотношение строчных и прописных букв
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 	public static double findPercentageUppercaseLetter(String string) {
 
 		String spacelessString = string.replaceAll("[^a-zA-Z]", "");
@@ -90,7 +91,7 @@ public class StringPracticeUnit01_06 {
 
 	}
 
-	// Удаление одинаковых символов
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	public static String findStringWithoutSimilarSymbols(String string) {
 		StringBuilder builderForResult = new StringBuilder();
 
@@ -111,7 +112,7 @@ public class StringPracticeUnit01_06 {
 
 	}
 
-	// Частота встречаемости символа в строке
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	public static int findCharFrequancyInString(String string, char symbolForCompare) {
 		int counter = 0;
 
@@ -126,7 +127,7 @@ public class StringPracticeUnit01_06 {
 		return counter;
 	}
 
-	// Переворот строки
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	public static String createReverseString(String string) {
 		StringBuilder stringBuilder = new StringBuilder(string);
 
@@ -136,7 +137,7 @@ public class StringPracticeUnit01_06 {
 
 	}
 
-	// Вставка подстроки
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	public static String addToStringNewPart(String string, String newPart, int startPosition) {
 		StringBuilder resultBuilder = new StringBuilder(string);
 		
@@ -148,7 +149,7 @@ public class StringPracticeUnit01_06 {
 
 	}
 
-	// Удаление подстроки
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	public static String deleteStringPart(String string, int startIndexForDelete, int endIndexForDelete) {
 		StringBuilder resultBuilder = new StringBuilder(string);
 		
