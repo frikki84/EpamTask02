@@ -21,9 +21,7 @@ public class StringPracticeUnit13_18 {
 		
 		String stringWithAdditionalSpaces = addSpacesToString(example, 5, 10);
 		System.out.println(stringWithAdditionalSpaces);
-		
-		
-		
+	
 		
 		
 	}
@@ -58,9 +56,9 @@ public class StringPracticeUnit13_18 {
 
 		int minWordLength = wordList[0].length();
 
-		for (int i = 1; i < wordList.length; i++) {
-			if (wordList[i].length() < minWordLength) {
-				minWordLength = wordList[i].length();
+		for (String word : wordList) {
+			if (word.length() < minWordLength) {
+				minWordLength = word.length();
 			}
 		}
 

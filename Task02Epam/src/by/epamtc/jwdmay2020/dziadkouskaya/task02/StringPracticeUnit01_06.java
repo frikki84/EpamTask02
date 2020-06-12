@@ -34,7 +34,7 @@ public class StringPracticeUnit01_06 {
 		System.out.println("String With Insert Substring " + stringWithInsertString);
 		
 		
-		String stringWithDeletePart = deleteStringPart(example, 9, 11);
+		String stringWithDeletePart = deleteStringPart(example, 9, 12);
 		System.out.println("String With delete part " + stringWithDeletePart);
 
 	}
@@ -138,10 +138,11 @@ public class StringPracticeUnit01_06 {
 
 	// Вставка подстроки
 	public static String addToStringNewPart(String string, String newPart, int startPosition) {
-		String fistPart = string.substring(0, startPosition - 1);
-		String lastPart = string.substring(startPosition - 1);
-
-		String result = fistPart + newPart + lastPart;
+		StringBuilder resultBuilder = new StringBuilder(string);
+		
+		resultBuilder.insert(startPosition - 1, newPart);
+		
+		String result = resultBuilder.toString();
 
 		return result;
 
@@ -149,11 +150,12 @@ public class StringPracticeUnit01_06 {
 
 	// Удаление подстроки
 	public static String deleteStringPart(String string, int startIndexForDelete, int endIndexForDelete) {
-		String fistPart = string.substring(0, startIndexForDelete - 1);
-		String lastPart = string.substring(endIndexForDelete);
-
-		String result = fistPart + lastPart;
-
+		StringBuilder resultBuilder = new StringBuilder(string);
+		
+		resultBuilder.delete(startIndexForDelete - 1, endIndexForDelete - 1);
+		
+		String result = resultBuilder.toString();
+	
 		return result;
 	}
 

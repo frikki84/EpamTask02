@@ -9,7 +9,7 @@ public class StringPracticeUnit07_12 {
 		String example = "This is the house that Jack built." + 
 				"This is the malt that lay in the house that Jack built.";
 		
-		String stringWithCopyPart = copyStringPart(example, 1, 8, 24);
+		String stringWithCopyPart = copyStringPart(example, 13, 17, 47);
 		System.out.println(stringWithCopyPart);
 		
 		int stringLength = findStringLenth(example);
@@ -30,12 +30,13 @@ public class StringPracticeUnit07_12 {
 	// Копирование части строки
 	public static String copyStringPart(String string, int startPositionIndexToCopy, int endPositionIndexToCopy,
 			int startPositionIndexToInsert) {
+		StringBuilder resultBuilder = new StringBuilder(string);
+				
 		String copyPart = string.substring(startPositionIndexToCopy - 1, endPositionIndexToCopy);
 
-		String fistPart = string.substring(0, startPositionIndexToInsert - 1);
-		String lastPart = string.substring(startPositionIndexToInsert - 1);
-
-		String result = fistPart + copyPart + lastPart;
+		resultBuilder.insert(startPositionIndexToInsert - 1, copyPart);
+		
+		String result = resultBuilder.toString();
 
 		return result;
 
@@ -64,7 +65,7 @@ public class StringPracticeUnit07_12 {
 
 	// Вывести слова строки в обратном порядке
 	public static String creatStringWithReverseWordSequence(String string) {
-		String[] wordList = string.split(" ");
+		String[] wordList = string.split("\\s");
 
 		StringBuilder builder = new StringBuilder();
 
