@@ -3,25 +3,24 @@ package by.epamtc.jwdmay2020.dziadkouskaya.task02;
 public class StringPracticeUnit19_24 {
 	public static void main(String[] args) {
 		String experimentString = "   A New Year is like a blank book, and the pen is in your hands.  ";
-		
+
 		boolean isWordPalindrome = isPalindrom(experimentString);
 		System.out.println("Is the word a palindrome? - " + isWordPalindrome);
-		
-		
-		String summOfLongNumbers = findSummOfLongNumbers(120785L, 109124799300156565L);
+
+		String summOfLongNumbers = findSummOfLongNumbers(8949993999945495469L, 2943878678678688888L);
 		System.out.println(summOfLongNumbers);
-		
-		String stringWithChangedSubstrings = changeSubstringToAnotherSubstring(experimentString, "a blank book", "the pen");
+
+		String stringWithChangedSubstrings = changeSubstringToAnotherSubstring(experimentString, "a blank book",
+				"the pen");
 		System.out.println(stringWithChangedSubstrings);
-		
-	
+
 		String stringWithoutWordsOfCertainLength = deleteWordsOfCertainLength(experimentString, 3);
 		System.out.println(stringWithoutWordsOfCertainLength);
-		
+
 		String stringWithoutOddSpaces = deleteOddSpaces(experimentString);
 		System.out.println(stringWithoutOddSpaces);
-		
-		String [] wordsList = findWordsArray(experimentString);
+
+		String[] wordsList = findWordsArray(experimentString);
 		for (String i : wordsList) {
 			System.out.print(i + " ");
 		}
@@ -56,45 +55,35 @@ public class StringPracticeUnit19_24 {
 
 	// Сложение очень длинных целых чисел
 	public static String findSummOfLongNumbers(long number1, long number2) {
-		StringBuilder number1String = new StringBuilder(String.valueOf(number1));
+		long lastSymbolFromNumber1 = 0;
+		long number1WithoutLastSymbol = number1;
 
-		StringBuilder number2String = new StringBuilder(String.valueOf(number2));
+		long lastSymbolFromNumber2 = 0;
+		long number2WithoutLastSymbol = number2;
 
-		int lenthDifference = number1String.length() - number2String.length();
+		long lastSymbolsSumm = 1;
+		long additionalOne = 0;
 
-		if (lenthDifference != 0) {
-
-			StringBuilder zeroString = new StringBuilder();
-
-			for (int i = 0; i < Math.abs(lenthDifference); i++) {
-				zeroString.append(0);
-			}
-
-			if (lenthDifference > 0) {
-				number2String.insert(0, zeroString);
-			} else {
-				number1String.insert(0, zeroString);
-			}
-		}
 		StringBuilder resultStringBuilder = new StringBuilder();
 
-		int additionalOne = 0;
+		while (number1WithoutLastSymbol != 0 || number2WithoutLastSymbol != 0) {
+			
+			lastSymbolFromNumber1 = number1WithoutLastSymbol % 10;
+			number1WithoutLastSymbol /= 10;
+			
+			lastSymbolFromNumber2 = number2WithoutLastSymbol % 10;
+			number2WithoutLastSymbol /= 10;
+						
+			lastSymbolsSumm = lastSymbolFromNumber1 + lastSymbolFromNumber2 + additionalOne;
 
-		for (int i = number1String.length() - 1; i >= 0; i--) {
-			int middleResult = Character.digit(number1String.charAt(i), 10)
-					+ Character.digit(number2String.charAt(i), 10);
+			additionalOne = 0;
 
-			middleResult += additionalOne;
-
-			if (middleResult > 9) {
-
-				middleResult %= 10;
+			if (lastSymbolsSumm > 9) {
+				lastSymbolsSumm %= 10;
 				additionalOne = 1;
-
-			} else {
-				additionalOne = 0;
 			}
-			resultStringBuilder.append(middleResult);
+
+			resultStringBuilder.append(lastSymbolsSumm);
 		}
 		if (additionalOne == 1) {
 			resultStringBuilder.append(additionalOne);
@@ -103,7 +92,7 @@ public class StringPracticeUnit19_24 {
 		String result = resultStringBuilder.reverse().toString();
 
 		return result;
-	}
+}
 
 	// Удаление из строки слов заданной длины
 	public static String deleteWordsOfCertainLength(String string, int wordsLenth) {
