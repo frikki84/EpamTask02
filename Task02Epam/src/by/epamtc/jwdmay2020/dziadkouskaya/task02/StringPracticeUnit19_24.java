@@ -28,7 +28,7 @@ public class StringPracticeUnit19_24 {
 
 	}
 
-	// �������� �� ������ ���������?
+	//Является ли строка палиндром?
 	public static boolean isPalindrom(String string) {
 		boolean result = true;
 
@@ -47,14 +47,14 @@ public class StringPracticeUnit19_24 {
 
 	}
 
-	// ������ ��������� � ������
+	//Замена подстроки в строке
 	public static String changeSubstringToAnotherSubstring(String string, String oldSubstring, String newSubstring) {
 
 		return string.replaceFirst(oldSubstring, newSubstring);
 
 	}
 
-	// �������� ����� ������� ����� �����
+	//Сложение очень длинных целых чисел
 	public static String findSummOfLongNumbers(long number1, long number2) {
 		long lastSymbolFromNumber1 = 0;
 		long number1WithoutLastSymbol = number1;
@@ -95,7 +95,8 @@ public class StringPracticeUnit19_24 {
 		return result;
 }
 
-	// �������� �� ������ ���� �������� �����
+	
+	//Удаление из строки слов заданной длины
 	public static String deleteWordsOfCertainLength(String string, int wordsLenth) {
 		String[] wordList = string.split("\\s+");
 
@@ -111,13 +112,13 @@ public class StringPracticeUnit19_24 {
 
 	}
 
-	// �������� ������ ��������
+	//Удаление лишних пробелов
 	public static String deleteOddSpaces(String string) {
 		return string.replaceAll(" +", " ").trim();
 
 	}
 
-	// ��������� ���� �� ������
+	//Выделение слов из строки
 	public static String[] findWordsArray(String string) {
 		String[] wordList = string.split("\\W+");
 		return wordList;

@@ -28,7 +28,7 @@ public class StringPracticeUnit07_12 {
 	}
 
 
-	// ����������� ����� ������
+	//Копирование части строки
 	public static String copyStringPart(String string, int startPositionIndexToCopy, int endPositionIndexToCopy,
 			int startPositionIndexToInsert) {
 		StringBuilder resultBuilder = new StringBuilder(string);
@@ -42,14 +42,13 @@ public class StringPracticeUnit07_12 {
 		return result;
 
 	}
-
-	// ����������� ����� ������
+	//Определение длины строки
 	public static int findStringLenth(String string) {
 
 		return string.length();
 	}
 
-	// ���������� ��������� ��������� � ������
+	//Количество вхождений подстроки в строку
 	public static int findNumberOfSubstringInString(String string, String substring) {
 		int counter = 0;
 
@@ -64,7 +63,7 @@ public class StringPracticeUnit07_12 {
 
 	}
 
-	// ������� ����� ������ � �������� �������
+	//Вывести слова строки в обратном порядке
 	public static String creatStringWithReverseWordSequence(String string) {
 		String[] wordList = string.split("\\s");
 
@@ -79,7 +78,7 @@ public class StringPracticeUnit07_12 {
 
 	}
 
-	// �������� ������ � ������ �������� �������� "*"
+	//Заменить пробел и группы пробелов символом "*"
 	public static String changeSpacesToStars(String string) {
 		String regex = " +";
 		String result = string.replaceAll(regex, "*");

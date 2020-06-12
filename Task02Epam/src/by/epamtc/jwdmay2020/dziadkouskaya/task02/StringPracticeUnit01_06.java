@@ -40,8 +40,7 @@ public class StringPracticeUnit01_06 {
 
 	}
 
-	// ������ � �������� ������� ��������� �� ������ �������
-
+	// Четные и нечетные символы разделить по разным строкам
 	public static String makeEvenCharecterString(String string) {
 		StringBuilder evenString = new StringBuilder();
 
@@ -70,7 +69,7 @@ public class StringPracticeUnit01_06 {
 		return result;
 	}
 
-	// ���������� ����������� �������� � ��������� ����
+	// Процентное соотношение строчных и прописных букв
 	public static double findPercentageUppercaseLetter(String string) {
 
 		String spacelessString = string.replaceAll("[^a-zA-Z]", "");
@@ -91,7 +90,7 @@ public class StringPracticeUnit01_06 {
 
 	}
 
-	// �������� ���������� ��������
+	//Удаление одинаковых символов
 	public static String findStringWithoutSimilarSymbols(String string) {
 		StringBuilder builderForResult = new StringBuilder();
 
@@ -112,7 +111,7 @@ public class StringPracticeUnit01_06 {
 
 	}
 
-	// ������� ������������� ������� � ������
+	//Частота встречаемости символа в строке
 	public static int findCharFrequancyInString(String string, char symbolForCompare) {
 		int counter = 0;
 
@@ -127,7 +126,7 @@ public class StringPracticeUnit01_06 {
 		return counter;
 	}
 
-	// ��������� ������
+	//Переворот строки
 	public static String createReverseString(String string) {
 		StringBuilder stringBuilder = new StringBuilder(string);
 
@@ -137,7 +136,7 @@ public class StringPracticeUnit01_06 {
 
 	}
 
-	// ������� ���������
+	// Вставка подстроки
 	public static String addToStringNewPart(String string, String newPart, int startPosition) {
 		StringBuilder resultBuilder = new StringBuilder(string);
 		
@@ -149,7 +148,7 @@ public class StringPracticeUnit01_06 {
 
 	}
 
-	// �������� ���������
+	//Удаление подстроки
 	public static String deleteStringPart(String string, int startIndexForDelete, int endIndexForDelete) {
 		StringBuilder resultBuilder = new StringBuilder(string);
 		

@@ -28,7 +28,7 @@ public class StringPracticeUnit13_18 {
 	}
 	
 
-	// �������� � ����� ������� ����� ������ ����� 'a' �� 'b'
+	//Заменить в самом длинном слове строки буквы 'a' на 'b'
 	public static String changeLetterAtoBInLongestWord(String string) {
 		String[] wordList = string.split(" ");
 
@@ -51,7 +51,7 @@ public class StringPracticeUnit13_18 {
 		return result;
 	}
 
-	// ���������� ����� ������ ��������� ����� � ������
+	//Определить длину самого короткого слова в строке
 	public static int findShortestWordLength(String string) {
 		String[] wordList = string.split("\\s+");
 
@@ -66,7 +66,7 @@ public class StringPracticeUnit13_18 {
 		return minWordLength;
 	}
 
-	// ������� ���������� ���� � ������
+	//Подсчет количества слов в строке
 	public static int findWordsNumberInString(String string) {
 		String[] wordList = string.split(" +");
 
@@ -76,7 +76,7 @@ public class StringPracticeUnit13_18 {
 
 	}
 
-	// �������� ����� �������
+	//Поменять слова местами
 	public static String swapWordsInString(String string, int numberOfFirstWord, int numberOfSecondWord) {
 
 		String[] wordList = string.split("\\s+");
@@ -93,7 +93,7 @@ public class StringPracticeUnit13_18 {
 
 	}
 
-	// �������� ���������� ����� � ������
+	//Удаление последнего слова в строке
 	public static String deleteLastWordInString(String string) {
 		String[] wordList = string.split("\\s+");
 
@@ -104,7 +104,7 @@ public class StringPracticeUnit13_18 {
 		return result;
 	}
 
-	// ���������� �������� � ������
+	//Добавление пробелов в строку
 	public static String addSpacesToString(String string, int indexOfPlaceToAddSpace, int numberOfSpaces) {
 		StringBuilder lineOfSpaces = new StringBuilder();
 
